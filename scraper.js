@@ -1,10 +1,12 @@
 // scraper.js
-const axios = require('axios');
-const cheerio = require('cheerio');
-const admin = require('firebase-admin');
+import axios from 'axios';
+import cheerio from 'cheerio';
+import admin from 'firebase-admin';
+import { createRequire } from 'module';
 
-// Firebase 초기화
+const require = createRequire(import.meta.url);
 const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
