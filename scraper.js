@@ -1,4 +1,5 @@
 // scraper.js
+import { ReadableStream } from 'stream/web';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import admin from 'firebase-admin';
